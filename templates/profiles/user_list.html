@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container-fluid">
+    <h2 class="center h1">Список пользователей</h2>
+    <!-- begin cards -->
+    <div class="cards">
+        {% for profile in user_list %}
+        <!-- begin ll -->
+        <div class="ll">
+            <div class="card blue-hover">
+                <div class="card-item">
+                    <img class="card-img" src="{{ profile.image_url }}"></img>
+                    <div class="text-card-cont">
+                        <div class="mr-grid">
+                            <div class="col1">
+                                <h2>{{ profile.full_name }}</h2>
+                                <ul class="card-gen">
+                                    <li>{{ profile.position }}</li>
+{#                                    {% for office in profile.office_set.all %}#}
+{#                                        <li>{{ office }}/</li>#}
+{#                                        <li class="card-gen-room">к {{ office.room }}</li>#}
+{#                                    {% endfor %}#}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mr-grid summary-row">
+                            <div class="col2">
+                            {% for company in profile.office_set.all %}
+                                <h5>{{ company.firm }}</h5>
+                            {% endfor %}
+
+                            </div>
+                            <div class="col2">
+                                <ul class="card-likes">
+                                    <li>{{ profile.birthday }}</li>
+{#                                    <li><i class="material-icons">&#xE813;</i>124</li>#}
+{#                                    <li><i class="material-icons">&#xE813;</i>3</li>#}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mr-grid">
+                            <div class="col1">
+                                <p class="card-description">{{ profile.bio|truncatechars:400 }} </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mr-grid actors-row">
+                    <div class="col1">
+                        <p class="card-actors">{% for phone in profile.phonenumber_set.all %}
+                            <span>{{ phone.phone_mobile }}</span>
+                            <span>{{ phone.phone_city }}</span>
+                            <span>{{ phone.phone_small }}</span>
+                        {% endfor %}
+                        </p>
+                    </div>
+                </div>
+                <div class="mr-grid action-row">
+                    <div class="col2">
+                        <div class="watch-btn"><h3><i class="material-icons">&#xE037;</i>Позвонить</h3></div>
+                    </div>
+                    <div class="col6 action-btn"><i class="material-icons">&#xE161;</i>
+                    </div>
+                    <div class="col6 action-btn"><i class="material-icons">&#xE866;</i>
+                    </div>
+                    <div class="col6 action-btn"><i class="material-icons">&#xE80D;</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end ll -->
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

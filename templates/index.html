@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>PhoneBook</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  
+</head>
+
+<body>
+<section class="container-fluid">
+    <!-- begin cards -->
+    <div class="cards">
+        <!-- begin ll -->
+        <div class="ll">
+            <div class="card blue-hover">
+                <div class="card-item">
+                    <img class="card-img" src="http://i63.tinypic.com/17s7me.jpg"></img>
+                    <div class="text-card-cont">
+                        <div class="mr-grid">
+                            <div class="col1">
+                                <h1>Сулейманов Абекдук</h1>
+                                <ul class="card-gen">
+                                    <li>29.11.1961 /</li>
+                                    <li>Червишевский тракт 21 /</li>
+                                    <li>к 303</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mr-grid summary-row">
+                            <div class="col2">
+                                <h5>УК АРСИБ</h5>
+                            </div>
+                            <div class="col2">
+                                <ul class="card-likes">
+                                    <li><i class="material-icons">&#xE813;</i>124</li>
+                                    <li><i class="material-icons">&#xE813;</i>3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mr-grid">
+                            <div class="col1">
+                                <p class="card-description">A group of elderly people are giving interviews about having
+                                    lived in a climate of crop blight and constant dust reminiscent of The Great
+                                    Depression of the 1930's. The first one seen is an elderly woman stating her father
+                                    was a farmer, but did not start out that way. </p>
+                            </div>
+                        </div>
+                        <div class="mr-grid actors-row">
+                            <div class="col1">
+                                <p class="card-actors">Matthew McConaughey, Anne Hathaway, Jessica Chastain</p>
+                            </div>
+                        </div>
+                        <div class="mr-grid action-row">
+                            <div class="col2">
+                                <div class="watch-btn"><h3><i class="material-icons">&#xE037;</i>Позвонить</h3></div>
+                            </div>
+                            <div class="col6 action-btn"><i class="material-icons">&#xE161;</i>
+                            </div>
+                            <div class="col6 action-btn"><i class="material-icons">&#xE866;</i>
+                            </div>
+                            <div class="col6 action-btn"><i class="material-icons">&#xE80D;</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end ll -->
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
